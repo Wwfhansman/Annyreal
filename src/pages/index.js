@@ -4,6 +4,7 @@ import GalleryComponent from '../components/GalleryComponent';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+
   const categories = ['All', 'Fashion', 'Makeup', 'Product'];
 
   return (
