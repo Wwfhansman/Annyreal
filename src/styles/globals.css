@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-black;
+}
+
+.gallery-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4;
+}
+
+.gallery-item {
+  @apply relative overflow-hidden rounded-lg shadow-md transition-all duration-300;
+}
+
+.gallery-item img {
+  @apply w-full h-64 object-cover transform hover:scale-105 transition-transform;
+}
+
+.category-button {
+  @apply px-4 py-2 rounded-full transition-colors;
+}
+
+.category-button-active {
+  @apply bg-black text-white;
+}
+
+.category-button-inactive {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+/* Disable right-click download */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Watermark overlay */
+.watermark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.3;
+  pointer-events: none;
+}
